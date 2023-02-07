@@ -2,27 +2,29 @@
   <ion-page>
     <ion-header :translucent="true">
       <ion-toolbar>
-        <ion-title>Blank</ion-title>
+        <ion-title>Bienvenue dans notre boutique</ion-title>
       </ion-toolbar>
     </ion-header>
 
     <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Blank</ion-title>
-        </ion-toolbar>
-      </ion-header>
-
-      <div id="container">
-        <strong>Ready to create an app?</strong>
-        <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-      </div>
+      <ion-img src="https://images.unsplash.com/photo-1595206133361-b1fe343e5e23?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Image de la boutique"></ion-img>
+          <h1>Vous pouvez consulter nos produits</h1>
+          <ion-button router-link="/produit">Aller dans notre boutique</ion-button>
     </ion-content>
   </ion-page>
 </template>
 
-<script setup lang="ts">
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
+<script lang="ts">
+import { IonContent, IonHeader, IonPage, IonButton, IonToolbar } from '@ionic/vue';
+import { defineComponent} from 'vue';
+export default defineComponent({
+
+  name:"HomePage",
+  // data:()=>{
+  //   test:"test"
+  // },
+  components: {IonContent, IonPage,IonHeader,IonButton,IonToolbar },
+});
 </script>
 
 <style scoped>
